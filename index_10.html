@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Next Level Academy</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=Inter:wght@400;500;600&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { overflow-x: hidden; }
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f5f0eb;
+  color: #1a1a1a;
+  overflow-x: hidden;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 64px;
+  background: #fff;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.nav-logo-icon { width: 38px; height: 38px; }
+.nav-logo-text {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 28px;
+  font-weight: 900;
+  color: #1a1a1a;
+  line-height: 1;
+}
+.nav-logo-text span { color: #ff5c1a; }
+.nav-menu-btn {
+  width: 42px; height: 42px;
+  background: #f0f0f0;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 10px;
+}
+.nav-menu-btn span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #1a1a1a;
+  border-radius: 2px;
+}
+
+/* ── HERO ── */
+body { padding-top: 64px; }
+.hero {
+  min-height: calc(100vh - 64px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 3rem 1.5rem 4rem;
+}
+
+.hero-title-next {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(72px, 20vw, 160px);
+  font-weight: 900;
+  color: #1a1a1a;
+  line-height: 0.9;
+  letter-spacing: -2px;
+}
+.hero-title-academy {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(72px, 20vw, 160px);
+  font-weight: 900;
+  color: #ff5c1a;
+  line-height: 0.9;
+  letter-spacing: -2px;
+  margin-bottom: 1rem;
+}
+.hero-tagline {
+  font-size: clamp(16px, 4vw, 20px);
+  color: #666;
+  margin-bottom: 1.75rem;
+  font-weight: 400;
+}
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1.5px solid #ff5c1a;
+  border-radius: 99px;
+  padding: 10px 20px;
+  font-size: clamp(13px, 3vw, 15px);
+  font-weight: 600;
+  color: #ff5c1a;
+  font-style: italic;
+  letter-spacing: 0.5px;
+  margin-bottom: 1.25rem;
+}
+.hero-cta {
+  background: #ff5c1a;
+  color: #1a1a1a;
+  border: none;
+  border-radius: 12px;
+  padding: 18px 40px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(20px, 5vw, 26px);
+  font-weight: 800;
+  cursor: pointer;
+  letter-spacing: 0.5px;
+  transition: all 0.2s;
+  width: 100%;
+  max-width: 360px;
+}
+.hero-cta:hover { background: #e04a0e; transform: translateY(-2px); }
+
+/* ── STATS ── */
+.stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  margin-top: 3rem;
+  width: 100%;
+  max-width: 600px;
+}
+.stat-item {
+  flex: 1;
+  text-align: center;
+  padding: 0 1rem;
+  border-right: 1px solid rgba(0,0,0,0.12);
+}
+.stat-item:last-child { border-right: none; }
+.stat-val {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(32px, 8vw, 52px);
+  font-weight: 900;
+  color: #ff5c1a;
+  line-height: 1;
+}
+.stat-lbl {
+  font-size: clamp(11px, 2.5vw, 13px);
+  color: #888;
+  margin-top: 4px;
+}
+
+@media(max-width: 400px) {
+  .hero-eyebrow { font-size: 12px; padding: 8px 14px; }
+  .stats { gap: 0; }
+  .stat-item { padding: 0 0.5rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="#">
+    <svg class="nav-logo-icon" viewBox="0 18 80 58" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="bg2" cx="38%" cy="32%" r="65%"><stop offset="0%" stop-color="#fff"/><stop offset="100%" stop-color="#c8c8c8"/></radialGradient>
+        <linearGradient id="fg1b" x1="40" y1="62" x2="40" y2="16" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#ff5c1a"/><stop offset="55%" stop-color="#ff8c42"/><stop offset="100%" stop-color="#ffe066"/></linearGradient>
+        <linearGradient id="fg2b" x1="40" y1="58" x2="40" y2="24" gradientUnits="userSpaceOnUse"><stop offset="0%" stop-color="#ff8c42"/><stop offset="100%" stop-color="#fff8a0"/></linearGradient>
+      </defs>
+      <ellipse cx="40" cy="66" rx="22" ry="10" fill="rgba(255,92,26,0.2)"/>
+      <path d="M40 60 C27 55 20 45 23 33 C20 41 23 49 27 52 C22 44 23 33 29 25 C26 35 29 43 33 45 C31 35 34 25 40 18 C46 25 49 35 47 45 C51 43 54 35 51 25 C57 33 58 44 53 52 C57 49 60 41 57 33 C60 45 53 55 40 60Z" fill="url(#fg1b)"/>
+      <path d="M40 57 C32 53 28 45 31 37 C29 42 31 48 35 50 C31 43 33 37 37 30 C37 38 39 44 41 46 C41 39 43 33 42 30 C46 36 47 42 44 50 C48 48 50 42 48 37 C51 45 48 53 40 57Z" fill="url(#fg2b)" opacity="0.9"/>
+      <circle cx="40" cy="48" r="19" fill="url(#bg2)" stroke="rgba(0,0,0,0.07)" stroke-width="0.5"/>
+      <path d="M40 31 L44.4 35.5 L42.6 42 L37.4 42 L35.6 35.5Z" fill="#111" opacity="0.65"/>
+      <path d="M53 39 L55.5 44.5 L51 49 L46.4 47.2 L46.4 41Z" fill="#111" opacity="0.65"/>
+      <path d="M27 39 L24.5 44.5 L29 49 L33.6 47.2 L33.6 41Z" fill="#111" opacity="0.65"/>
+      <path d="M34 59 L29.6 53.6 L31.6 48 L37 47 L40 51Z" fill="#111" opacity="0.65"/>
+      <path d="M46 59 L50.4 53.6 L48.4 48 L43 47 L40 51Z" fill="#111" opacity="0.65"/>
+    </svg>
+    <div class="nav-logo-text">Football<span>IQ</span></div>
+  </a>
+  <button class="nav-menu-btn" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-title-next">NEXT LEVEL</div>
+  <div class="hero-title-academy">ACADEMY</div>
+  <div class="hero-tagline">— Din Digitale Coach</div>
+  <div class="hero-eyebrow">⚽ Klar til at tage dit niveau til NEXT LEVEL?</div>
+  <button class="hero-cta" onclick="window.location.href='https://thwj95-source.github.io/Football-IQ/'">
+    Find din spillertype →
+  </button>
+
+  <div class="stats">
+    <div class="stat-item">
+      <div class="stat-val">7</div>
+      <div class="stat-lbl">Spillertyper</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-val">12</div>
+      <div class="stat-lbl">Spørgsmål</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-val">50</div>
+      <div class="stat-lbl">Stjernespillere</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-val">5</div>
+      <div class="stat-lbl">Positioner</div>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>
